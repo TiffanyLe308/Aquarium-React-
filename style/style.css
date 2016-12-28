@@ -1,6 +1,6 @@
 body {
   font-family: 'PT Serif', serif;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .navbar-custom {
@@ -11,7 +11,7 @@ body {
 
 .navbar-custom a{
   color: #000000 !important;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .navbar-custom a:hover {
@@ -31,7 +31,7 @@ body {
   right: 0;
   height: 700px;
   position: absolute;
-  background-image: url("../images/IMG_166590.jpg");
+  background-image: url("../images/IMG_166593.jpg");
   background-position: center center;
 	background-repeat:  no-repeat;
 	background-size: cover;
