@@ -23,7 +23,7 @@ export default class navbarInstance extends Component {
               <MenuItem divider />
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>*/}
-            <NavDropdown eventKey={4} title="Gallery" id="basic-nav-dropdown">
+            <NavDropdown eventKey={4} title="Gallery" id="basic-nav-dropdown dropdown-menu">
               <MenuItem eventKey={4.1}>Aquarium</MenuItem>
               <MenuItem eventKey={4.1}>Nano Aquarium</MenuItem>
             </NavDropdown>

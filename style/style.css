@@ -1,11 +1,59 @@
+body {
+  font-family: 'PT Serif', serif;
+  font-size: 25px;
+}
+
 .navbar-custom {
-  background-color: white !important;
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  padding-top: 15px;
 }
 
 .navbar-custom a{
   color: #000000 !important;
+  font-size: 25px;
 }
 
 .navbar-custom a:hover {
-  color: #107cce !important;
+  color: #F7941D !important;
+}
+
+.navbar-custom a:focus, .navbar-nav>.open>a {
+  background-color: #ffffff !important;
+}
+
+.dropdown-menu {
+  margin-top: 20px !important;
+}
+
+.background-cover {
+  left: 0;
+  right: 0;
+  height: 700px;
+  position: absolute;
+  background-image: url("../images/IMG_166590.jpg");
+  background-position: center center;
+	background-repeat:  no-repeat;
+	background-size: cover;
+}
+
+.intro {
+  margin-top: 800px;
+  text-align: center;
+}
+
+.footer {
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 200px;
+  background-color: #edeaea;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .background-cover {
+      height: 200px;
+    }
 }
