@@ -1,6 +1,6 @@
 body {
   font-family: 'PT Serif', serif;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .navbar-custom {
@@ -15,7 +15,7 @@ body {
 }
 
 .navbar-custom a:hover {
-  color: #F7941D !important;
+  color: #d87008 !important;
 }
 
 .navbar-custom a:focus, .navbar-nav>.open>a {
@@ -38,22 +38,74 @@ body {
 }
 
 .intro {
-  margin-top: 800px;
+  margin-top: 70%;
+  height: 500px;
   text-align: center;
+}
+
+.intro-pic {
+  padding-top: 35px;
 }
 
 .footer {
   left: 0;
   right: 0;
+  margin-top: 10%;
   position: absolute;
-  height: 200px;
+  height: 150px;
   background-color: #edeaea;
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+.footer a {
+  color: #d87008;
+  margin: 2px;
+}
+
+.footer a:hover {
+  color: #30627e;
+}
+
+.footer .copy {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
     /* For mobile phones: */
+    body{
+      font-size: 14px;
+    }
     .background-cover {
       height: 200px;
     }
+    .intro{
+      margin-top: 75%;
+    }
+    .intro-pic-item {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 60em;
+      height: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body{
+      font-size: 17px;
+    }
+    .background-cover {
+      height: 300px;
+    }
+    .intro{
+      margin-top: 50%;
+    }
+    .intro-pic-item {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 160%;
+      height: 100px;
+  }
 }

@@ -5,6 +5,25 @@ export default class Introduction extends Component {
     return(
       <div className="intro">
         <h1>Welcome to our website</h1>
+        <p>We strive to bring aquarium hobbyists the best information, news and picture available to successfully create and maintain their own aquarium.
+          Welcome to the community, we look forward to getting to know you and your aquarium! </p>
+        <div className="row intro-pic">
+          <div className="col-md-4">
+            <img className="img-responsive" src="../../images/IMG_166590.jpg" />
+            <h3><strong><i>Aquarium Maintenance</i></strong></h3>
+            <p>Good aquarium maintenance practices will lead to a healthy aquatic environment and thriving fish, providing years of joy for the hobbyist.</p>
+          </div>
+          <div className="col-md-4">
+            <img className="img-responsive intro-pic-item" src="../../images/IMG_166592.jpg" />
+            <h3><strong><i>Aquarium Volume</i></strong></h3>
+            <p> Water volume is needed to ensure you treat your aquarium with the correct dosage of  medication, fish stocking levels, and filters setup .</p>
+          </div>
+          <div className="col-md-4">
+            <img className="img-responsive intro-pic-item" src="../../images/IMG_166591.jpg" />
+            <h3><strong><i>Aquarium Fish Care</i></strong></h3>
+            <p>Watching your aquarium is the source of enjoyment you get from your aquarium, so take the time to watch for unusual behavior and signs of illness or distress.</p>
+          </div>
+        </div>
       </div>
     );
   }
