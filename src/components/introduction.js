@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Introduction extends Component {
   render() {
     return(
-      <div className="intro">
+      <div className="container intro">
         <h1>Welcome to our website</h1>
         <p>We strive to bring aquarium hobbyists the best information, news and picture available to successfully create and maintain their own aquarium.
           Welcome to the community, we look forward to getting to know you and your aquarium! </p>
