@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-export default class navbarInstance extends Component {
+export default class Menu extends Component {
   render() {
     return(
       <Navbar collapseOnSelect className="navbar-custom">
