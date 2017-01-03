@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+
+import About from '../about/about';
 
 export default class Menu extends Component {
   render() {
     return(
       <Navbar collapseOnSelect className="navbar-custom">
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">Aquarium</a>
+          <Navbar.Brand className="navbrand">
+            <a className="navbrand-logo" href="/"><img className="img-responsive" src="../../images/IMG_166598.jpg" /></a>
+            <a className="navbrand-name" href="/">Aquarium Nerd</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#">Home</NavItem>
-            <NavItem eventKey={2} href="#">About</NavItem>
+            <LinkContainer to="/">
+            <NavItem eventKey={1}>Home</NavItem>
+            </LinkContainer>
+
+            <LinkContainer to="/about">
+              <NavItem eventKey={2}>About</NavItem>
+            </LinkContainer>
+
             <NavItem eventKey={3} href="#">News</NavItem>
             {/*<NavDropdown eventKey={3} title="News" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
