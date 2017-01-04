@@ -11,7 +11,7 @@ export default class Footer extends Component {
             <a href="https://fi.pinterest.com/explore/nano-aquarium/"><i className="fa fa-pinterest-square fa-2x"></i></a>
           </div>
           <div className="copy">
-              <p><strong><i>&copy; 2017 Aquarium Nerd</i></strong></p>
+              <p><strong><i>&copy; 2017 aquariumnerd.net - All rights reserved</i></strong></p>
           </div>
       </div>
     );

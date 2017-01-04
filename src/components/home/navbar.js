@@ -21,11 +21,7 @@ export default class Menu extends Component {
             <NavItem eventKey={1}>Home</NavItem>
             </LinkContainer>
 
-            <LinkContainer to="/about">
-              <NavItem eventKey={2}>About</NavItem>
-            </LinkContainer>
-
-            <NavItem eventKey={3} href="#">News</NavItem>
+            <NavItem eventKey={2} href="#">News</NavItem>
             {/*<NavDropdown eventKey={3} title="News" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>
@@ -33,11 +29,14 @@ export default class Menu extends Component {
               <MenuItem divider />
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>*/}
-            <NavDropdown eventKey={4} title="Gallery" id="basic-nav-dropdown dropdown-menu">
-              <MenuItem eventKey={4.1}>Aquarium</MenuItem>
-              <MenuItem eventKey={4.1}>Nano Aquarium</MenuItem>
+            <NavDropdown eventKey={3} title="Gallery" id="basic-nav-dropdown dropdown-menu">
+              <MenuItem eventKey={3.1}>Aquarium</MenuItem>
+              <MenuItem eventKey={3.1}>Nano Aquarium</MenuItem>
             </NavDropdown>
-            <NavItem eventKey={5} href="#">Contact</NavItem>
+
+            <LinkContainer to="/about">
+              <NavItem eventKey={4}>About & Contact</NavItem>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

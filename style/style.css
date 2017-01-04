@@ -22,7 +22,7 @@ body {
   color: #d87008 !important;
 }
 
-.navbar-custom a:focus, .navbar-nav>.open>a {
+.navbar-nav>.open>a {
   background-color: #ffffff !important;
 }
 
@@ -151,12 +151,30 @@ body {
     margin-top: 20px;
 }
 
+
+/*--------AboutUs-------*/
+
+.background-about {
+  height: 350px;
+  background-image: url("../images/IMG_166602.jpg");
+  background-position: center center;
+	background-repeat:  no-repeat;
+	background-size: cover;
+}
+
+.info-about {
+  margin-top: 50px;
+}
+
+
+/*--------MediaQueries-------*/
+
 @media (max-width: 480px) {
     /* For mobile phones: */
     body{
       font-size: 14px;
     }
-    .background-cover {
+    .background-cover, .background-about {
       height: 200px;
     }
     .background-article {
