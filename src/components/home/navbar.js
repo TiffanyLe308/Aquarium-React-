@@ -31,6 +31,7 @@ export default class Menu extends Component {
               <MenuItem divider />
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>*/}
+            
             <NavDropdown eventKey={3} title="Gallery" id="basic-nav-dropdown dropdown-menu">
               <MenuItem eventKey={3.1}>Aquarium</MenuItem>
               <LinkContainer to="/gallery"><MenuItem eventKey={3.1}>Nano Aquarium</MenuItem></LinkContainer>
