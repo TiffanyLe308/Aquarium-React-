@@ -3,8 +3,7 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import About from '../about/about';
-import Gallery from '../gallery/gallery';
-import GalleryImage from '../gallery/gallery-image';
+import GalleryNano from '../gallery/gallery-nano';
 
 export default class Menu extends Component {
   render() {
@@ -31,10 +30,10 @@ export default class Menu extends Component {
               <MenuItem divider />
               <MenuItem eventKey={3.3}>Separated link</MenuItem>
             </NavDropdown>*/}
-            
+
             <NavDropdown eventKey={3} title="Gallery" id="basic-nav-dropdown dropdown-menu">
-              <MenuItem eventKey={3.1}>Aquarium</MenuItem>
-              <LinkContainer to="/gallery"><MenuItem eventKey={3.1}>Nano Aquarium</MenuItem></LinkContainer>
+              <LinkContainer to="/gallery-aqua"><MenuItem eventKey={3.1}>Aquarium</MenuItem></LinkContainer>
+              <LinkContainer to="/gallery-nano"><MenuItem eventKey={3.1}>Nano Aquarium</MenuItem></LinkContainer>
             </NavDropdown>
 
             <LinkContainer to="/about">

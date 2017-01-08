@@ -125,6 +125,46 @@ body {
 }
 
 
+/*--------AboutUs-------*/
+
+.background-about {
+  height: 350px;
+  background-image: url("../images/IMG_166602.jpg");
+  background-position: center center;
+	background-repeat:  no-repeat;
+	background-size: cover;
+}
+
+.info-about {
+  margin-top: 50px;
+}
+
+
+/*--------Gallery-------*/
+
+.gallery-intro-nano h2, .gallery-intro-aqua h2 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+}
+
+.gallery-image-nano, .gallery-image-aqua {
+  padding-top: 50px;
+}
+
+.images-nano, .images-aqua {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.images-nano > div, .images-aqua > div {
+    flex: 0 0 auto;
+    padding: 10px;
+}
+
+
 /*--------Footer-------*/
 
 .footer {
@@ -149,21 +189,6 @@ body {
 .footer .copy {
     font-size: 16px;
     margin-top: 20px;
-}
-
-
-/*--------AboutUs-------*/
-
-.background-about {
-  height: 350px;
-  background-image: url("../images/IMG_166602.jpg");
-  background-position: center center;
-	background-repeat:  no-repeat;
-	background-size: cover;
-}
-
-.info-about {
-  margin-top: 50px;
 }
 
 
