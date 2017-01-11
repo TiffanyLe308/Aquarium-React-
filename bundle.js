@@ -27455,13 +27455,33 @@
 
 	var _about2 = _interopRequireDefault(_about);
 
+	var _galleryNano = __webpack_require__(524);
+
+	var _galleryNano2 = _interopRequireDefault(_galleryNano);
+
+	var _galleryAqua = __webpack_require__(530);
+
+	var _galleryAqua2 = _interopRequireDefault(_galleryAqua);
+
+	var _news = __webpack_require__(522);
+
+	var _news2 = _interopRequireDefault(_news);
+
+	var _no_match = __webpack_require__(532);
+
+	var _no_match2 = _interopRequireDefault(_no_match);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _app2.default },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'gallery-nano', component: _galleryNano2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'gallery-aqua', component: _galleryAqua2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'news', component: _news2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _no_match2.default })
 	);
 
 /***/ },
@@ -27484,19 +27504,19 @@
 
 	var _navbar2 = _interopRequireDefault(_navbar);
 
-	var _background = __webpack_require__(522);
+	var _background = __webpack_require__(526);
 
 	var _background2 = _interopRequireDefault(_background);
 
-	var _introduction = __webpack_require__(523);
+	var _introduction = __webpack_require__(527);
 
 	var _introduction2 = _interopRequireDefault(_introduction);
 
-	var _intro_article = __webpack_require__(524);
+	var _intro_article = __webpack_require__(528);
 
 	var _intro_article2 = _interopRequireDefault(_intro_article);
 
-	var _article_tips = __webpack_require__(525);
+	var _article_tips = __webpack_require__(529);
 
 	var _article_tips2 = _interopRequireDefault(_article_tips);
 
@@ -27566,6 +27586,14 @@
 
 	var _about2 = _interopRequireDefault(_about);
 
+	var _news = __webpack_require__(522);
+
+	var _news2 = _interopRequireDefault(_news);
+
+	var _galleryNano = __webpack_require__(524);
+
+	var _galleryNano2 = _interopRequireDefault(_galleryNano);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27624,22 +27652,34 @@
 	              )
 	            ),
 	            _react2.default.createElement(
-	              _reactBootstrap.NavItem,
-	              { eventKey: 2, href: '#' },
-	              'News'
+	              _reactRouterBootstrap.LinkContainer,
+	              { to: '/news' },
+	              _react2.default.createElement(
+	                _reactBootstrap.NavItem,
+	                { eventKey: 2, href: '#' },
+	                'News'
+	              )
 	            ),
 	            _react2.default.createElement(
 	              _reactBootstrap.NavDropdown,
 	              { eventKey: 3, title: 'Gallery', id: 'basic-nav-dropdown dropdown-menu' },
 	              _react2.default.createElement(
-	                _reactBootstrap.MenuItem,
-	                { eventKey: 3.1 },
-	                'Aquarium'
+	                _reactRouterBootstrap.LinkContainer,
+	                { to: '/gallery-aqua' },
+	                _react2.default.createElement(
+	                  _reactBootstrap.MenuItem,
+	                  { eventKey: 3.1 },
+	                  'Aquarium'
+	                )
 	              ),
 	              _react2.default.createElement(
-	                _reactBootstrap.MenuItem,
-	                { eventKey: 3.1 },
-	                'Nano Aquarium'
+	                _reactRouterBootstrap.LinkContainer,
+	                { to: '/gallery-nano' },
+	                _react2.default.createElement(
+	                  _reactBootstrap.MenuItem,
+	                  { eventKey: 3.1 },
+	                  'Nano Aquarium'
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -46635,7 +46675,7 @@
 /* 520 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -46646,6 +46686,8 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(266);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46665,36 +46707,36 @@
 	  }
 
 	  _createClass(AboutUs, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "container about-us" },
-	        _react2.default.createElement("div", { className: "background-about" }),
+	        'div',
+	        { className: 'container about-us' },
+	        _react2.default.createElement('div', { className: 'background-about' }),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "row info-about" },
+	          _reactBootstrap.Row,
+	          { className: 'info-about' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-md-10" },
+	            _reactBootstrap.Col,
+	            { md: 10 },
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "Here at AquariumNerd.net we try to offer you all the information you need whether you are a beginner or more advanced aquarist. If you are looking for answers, or are just curious and starting your research, we have gotten you covered! If there is something you think we have missed, or something that you would like to have answered please send an email to our email address: aquariumnerd.net@gmail.com. ",
-	              _react2.default.createElement("br", null),
-	              _react2.default.createElement("br", null),
-	              "We hope to provide accurate and useful information so please do not hesitate to drop us a line. Technology continues to grow in the aquarium industry and so does our knowledge, aquariums are soon becoming one of the most popular hobbies and pets, due to their association with modern day peace and the joy of having a fragile ecosystem in the palm of your hands.",
-	              _react2.default.createElement("br", null),
-	              _react2.default.createElement("br", null),
-	              "Cheers,",
-	              _react2.default.createElement("br", null),
-	              "Aquarium Nerd Info Team "
+	              'Here at AquariumNerd.net we try to offer you all the information you need whether you are a beginner or more advanced aquarist. If you are looking for answers, or are just curious and starting your research, we have gotten you covered! If there is something you think we have missed, or something that you would like to have answered please send an email to our email address: aquariumnerd.net@gmail.com. ',
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              'We hope to provide accurate and useful information so please do not hesitate to drop us a line. Technology continues to grow in the aquarium industry and so does our knowledge, aquariums are soon becoming one of the most popular hobbies and pets, due to their association with modern day peace and the joy of having a fragile ecosystem in the palm of your hands.',
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              'Cheers,',
+	              _react2.default.createElement('br', null),
+	              'Aquarium Nerd Info Team '
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-md-2" },
-	            _react2.default.createElement("img", { className: "img-responsive", src: "../../images/IMG_166603.jpg" })
+	            _reactBootstrap.Col,
+	            { md: 2 },
+	            _react2.default.createElement('img', { className: 'img-responsive', src: '../../images/IMG_166603.jpg' })
 	          )
 	        )
 	      );
@@ -46799,6 +46841,266 @@
 /* 522 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _navbar = __webpack_require__(265);
+
+	var _navbar2 = _interopRequireDefault(_navbar);
+
+	var _news_article = __webpack_require__(523);
+
+	var _news_article2 = _interopRequireDefault(_news_article);
+
+	var _footer = __webpack_require__(521);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var News = function (_Component) {
+	  _inherits(News, _Component);
+
+	  function News() {
+	    _classCallCheck(this, News);
+
+	    return _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).apply(this, arguments));
+	  }
+
+	  _createClass(News, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navbar2.default, null),
+	        _react2.default.createElement(_footer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return News;
+	}(_react.Component);
+
+	exports.default = News;
+
+/***/ },
+/* 523 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NewsArticle = function (_Component) {
+	  _inherits(NewsArticle, _Component);
+
+	  function NewsArticle() {
+	    _classCallCheck(this, NewsArticle);
+
+	    return _possibleConstructorReturn(this, (NewsArticle.__proto__ || Object.getPrototypeOf(NewsArticle)).apply(this, arguments));
+	  }
+
+	  _createClass(NewsArticle, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement('div', null);
+	    }
+	  }]);
+
+	  return NewsArticle;
+	}(_react.Component);
+
+	exports.default = NewsArticle;
+
+/***/ },
+/* 524 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _navbar = __webpack_require__(265);
+
+	var _navbar2 = _interopRequireDefault(_navbar);
+
+	var _footer = __webpack_require__(521);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	var _galleryImageNano = __webpack_require__(525);
+
+	var _galleryImageNano2 = _interopRequireDefault(_galleryImageNano);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var urlsnano = ['https://s26.postimg.org/lhgut09o9/nano_1.jpg', 'https://s26.postimg.org/56uj1x1bt/nano_4.jpg', 'https://s26.postimg.org/3wnivdss9/nano_2.jpg', 'https://s26.postimg.org/vla62wfsp/nano_3.jpg'];
+
+	var GalleryNano = function (_Component) {
+	  _inherits(GalleryNano, _Component);
+
+	  function GalleryNano() {
+	    _classCallCheck(this, GalleryNano);
+
+	    return _possibleConstructorReturn(this, (GalleryNano.__proto__ || Object.getPrototypeOf(GalleryNano)).apply(this, arguments));
+	  }
+
+	  _createClass(GalleryNano, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navbar2.default, null),
+	        _react2.default.createElement(_galleryImageNano2.default, { imageUrls: urlsnano }),
+	        _react2.default.createElement(_footer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return GalleryNano;
+	}(_react.Component);
+
+	exports.default = GalleryNano;
+
+/***/ },
+/* 525 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GalleryImageNano = function (_Component) {
+	  _inherits(GalleryImageNano, _Component);
+
+	  function GalleryImageNano() {
+	    _classCallCheck(this, GalleryImageNano);
+
+	    return _possibleConstructorReturn(this, (GalleryImageNano.__proto__ || Object.getPrototypeOf(GalleryImageNano)).apply(this, arguments));
+	  }
+
+	  _createClass(GalleryImageNano, [{
+	    key: "renderImage",
+	    value: function renderImage(imageUrl) {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement("img", { src: imageUrl })
+	      );
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "gallery-image-nano container" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "gallery-intro-nano" },
+	          _react2.default.createElement(
+	            "h2",
+	            null,
+	            "The little paradise for your own place"
+	          ),
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "A nano aquariums compact footprint make it a perfect fit for that empty corner or bare wall, and with the advances in multi-stage filtration and compact fluorescent lighting, maintaining a thriving freshwater system is easier than ever. The trendy full-of-life glass cube is an eye-catcher on a shelf, a sideboard, a desk or in a suitable cabinet as a stand-alone attraction.",
+	            _react2.default.createElement("br", null),
+	            _react2.default.createElement("br", null),
+	            "Small-volume aquariums also demand special attention because changes in water quality, temperature, and fish stress levels become more pronounced in aquariums less than 30 gallons. With patience, research, and a little extra diligence, you too can create a beautiful, healthy nano-system. Here are some of them."
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "images-nano" },
+	          this.props.imageUrls.map(function (imageUrl) {
+	            return _this2.renderImage(imageUrl);
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return GalleryImageNano;
+	}(_react.Component);
+
+	exports.default = GalleryImageNano;
+
+
+	GalleryImageNano.propTypes = {
+	  imageUrls: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
+	};
+
+/***/ },
+/* 526 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -46841,7 +47143,7 @@
 	exports.default = BackgroundImage;
 
 /***/ },
-/* 523 */
+/* 527 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46972,7 +47274,7 @@
 	exports.default = Introduction;
 
 /***/ },
-/* 524 */
+/* 528 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -47045,7 +47347,7 @@
 	exports.default = IntroArticle;
 
 /***/ },
-/* 525 */
+/* 529 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -47221,6 +47523,240 @@
 	}(_react.Component);
 
 	exports.default = ArticleTips;
+
+/***/ },
+/* 530 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _navbar = __webpack_require__(265);
+
+	var _navbar2 = _interopRequireDefault(_navbar);
+
+	var _footer = __webpack_require__(521);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	var _galleryImageAqua = __webpack_require__(531);
+
+	var _galleryImageAqua2 = _interopRequireDefault(_galleryImageAqua);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var urlsaqua = [
+	/*'https://s26.postimg.org/le0thz8c9/aqua_1.jpg',
+	'https://s26.postimg.org/sva0x6xvd/aqua_2.jpg',*/
+	'https://s26.postimg.org/m536ym6ex/aqua_1.jpg', 'https://s26.postimg.org/43k20tce1/aqua_2.jpg'];
+
+	var GalleryAqua = function (_Component) {
+	  _inherits(GalleryAqua, _Component);
+
+	  function GalleryAqua() {
+	    _classCallCheck(this, GalleryAqua);
+
+	    return _possibleConstructorReturn(this, (GalleryAqua.__proto__ || Object.getPrototypeOf(GalleryAqua)).apply(this, arguments));
+	  }
+
+	  _createClass(GalleryAqua, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_navbar2.default, null),
+	        _react2.default.createElement(_galleryImageAqua2.default, { imgUrls: urlsaqua }),
+	        _react2.default.createElement(_footer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return GalleryAqua;
+	}(_react.Component);
+
+	exports.default = GalleryAqua;
+
+/***/ },
+/* 531 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(266);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var GalleryImageAqua = function (_Component) {
+	  _inherits(GalleryImageAqua, _Component);
+
+	  function GalleryImageAqua() {
+	    _classCallCheck(this, GalleryImageAqua);
+
+	    return _possibleConstructorReturn(this, (GalleryImageAqua.__proto__ || Object.getPrototypeOf(GalleryImageAqua)).apply(this, arguments));
+	  }
+
+	  _createClass(GalleryImageAqua, [{
+	    key: 'renderImage',
+	    value: function renderImage(imgUrl) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          _reactBootstrap.Row,
+	          null,
+	          _react2.default.createElement(
+	            _reactBootstrap.Col,
+	            { md: 10 },
+	            _react2.default.createElement('img', { src: imgUrl })
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'gallery-image-aqua container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'gallery-intro-aqua' },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Its a world of its own!'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'Big fish tanks can not only look beautiful, they will also provide for healthier environments if you choose to house a high volume of fish, living coral or plants. Even if you do not currently own many fish, large aquariums offer you the option to get more when you\u2019re ready.',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            'Before looking through the many large fish tanks for sale, however, you should first consider your aquariums placement. Hard, flat surfaces are ideal. The surface you choose should be wide enough not just for the large aquariums you are considering, but also wide enough for the equipment and accessories necessary to maintain them.',
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            'And remember, water and electricity do not mix well together. Big fish tanks will require different equipment depending on the kind of living things you house within. Get inspired by the many large fish tanks below here and discover how you can create an impressive underwater equipment.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'images-aqua' },
+	          this.props.imgUrls.map(function (imgUrl) {
+	            return _this2.renderImage(imgUrl);
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return GalleryImageAqua;
+	}(_react.Component);
+
+	exports.default = GalleryImageAqua;
+
+
+	GalleryImageAqua.propTypes = {
+	  imgUrls: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
+	};
+
+/***/ },
+/* 532 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(200);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NoMatch = function (_Component) {
+	  _inherits(NoMatch, _Component);
+
+	  function NoMatch() {
+	    _classCallCheck(this, NoMatch);
+
+	    return _possibleConstructorReturn(this, (NoMatch.__proto__ || Object.getPrototypeOf(NoMatch)).apply(this, arguments));
+	  }
+
+	  _createClass(NoMatch, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'NoMatch'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          '404 error'
+	        ),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/' },
+	          'Home'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return NoMatch;
+	}(_react.Component);
+
+	exports.default = NoMatch;
 
 /***/ }
 /******/ ]);

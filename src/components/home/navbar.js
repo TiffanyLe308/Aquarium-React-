@@ -3,6 +3,7 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import About from '../about/about';
+import News from '../news/news';
 import GalleryNano from '../gallery/gallery-nano';
 
 export default class Menu extends Component {
@@ -18,11 +19,9 @@ export default class Menu extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <LinkContainer to="/">
-            <NavItem eventKey={1}>Home</NavItem>
-            </LinkContainer>
+            <LinkContainer to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer>
 
-            <NavItem eventKey={2} href="#">News</NavItem>
+            <LinkContainer to="/news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer>
             {/*<NavDropdown eventKey={3} title="News" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>

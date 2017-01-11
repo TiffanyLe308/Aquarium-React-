@@ -218,6 +218,9 @@ body {
     .navbrand-logo {
       display: none;
     }
+    .gallery-image-aqua {
+      width: 320px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -232,5 +235,8 @@ body {
     }
     .navbrand {
       padding: 0;
+    }
+    .gallery-image-aqua {
+      width: 640px;
     }
 }

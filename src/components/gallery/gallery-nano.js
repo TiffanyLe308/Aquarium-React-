@@ -6,8 +6,9 @@ import GalleryImageNano from './gallery-image-nano';
 
 const urlsnano = [
   'https://s26.postimg.org/lhgut09o9/nano_1.jpg',
+  'https://s26.postimg.org/56uj1x1bt/nano_4.jpg',
   'https://s26.postimg.org/3wnivdss9/nano_2.jpg',
-  'https://s26.postimg.org/vla62wfsp/nano_3.jpg',
+  'https://s26.postimg.org/vla62wfsp/nano_3.jpg'
 ];
 
 export default class GalleryNano extends Component {
