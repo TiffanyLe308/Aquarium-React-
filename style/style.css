@@ -177,6 +177,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 500px;
 }
 
 .image-nano-scroller, .image-aqua-scroller {
@@ -272,6 +273,12 @@ body {
     .image-aqua-small {
       display: flex;
     }
+    .image-nano-selected {
+      height: 300px;
+    }
+    .image-aqua-selected {
+      height: 150px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -295,5 +302,9 @@ body {
     }
     .image-aqua-small {
       display: flex;
+      height: 250px;
+    }
+    .image-aqua-selected {
+      height: 250px;
     }
 }
