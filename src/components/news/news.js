@@ -9,6 +9,7 @@ export default class News extends Component {
     return (
       <div>
         <Menu />
+        <NewsArticle />
         <Footer />
       </div>
     );

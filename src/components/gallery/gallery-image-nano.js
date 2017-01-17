@@ -1,15 +1,29 @@
 import React, { Component, PropTypes } from 'react';
+import "babel-polyfill";
+
+const urlsnano = [
+  'https://s26.postimg.org/i56lzz9ix/nano_1_640.jpg',
+  'https://s26.postimg.org/76vchskxl/nano_2_640.jpg',
+  'https://s26.postimg.org/uz4ntbmyh/nano_3_640.jpg',
+  'https://s26.postimg.org/4fc2r6mex/nano_4_640.jpg'
+];
 
 export default class GalleryImageNano extends Component {
-  renderImage(imageUrl) {
-    return (
-      <div>
-        <img src={imageUrl} />
-      </div>
-    );
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: urlsnano,
+      selectedImage: urlsnano[0]
+    }
+  }
+
+  handleClick(selectedImage) {
+    this.setState({selectedImage})
   }
 
   render() {
+    const {images, selectedImage} = this.state;
+
     return (
       <div className="gallery-image-nano container">
         <div className="gallery-intro-nano">
@@ -24,14 +38,22 @@ export default class GalleryImageNano extends Component {
           you too can create a beautiful, healthy nano-system. Here are some of them.
           </p>
         </div>
-        <div className="images-nano">
-          {this.props.imageUrls.map(imageUrl => this.renderImage(imageUrl))}
+
+        <div className="image-nano-slide">
+          <div className="image-nano-selected">
+            <div>
+              <img className="img-responsive" src={selectedImage} />
+            </div>
+          </div>
+          <div className="image-nano-scroller">
+            {images.map((image, index) => (
+              <div key={index} onClick={this.handleClick.bind(this,image)}>
+                <img src={image}/>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
   }
 }
-
-GalleryImageNano.propTypes = {
-  imageUrls: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-};

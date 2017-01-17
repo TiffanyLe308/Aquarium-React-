@@ -1,16 +1,28 @@
 import React, { Component, PropTypes } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import "babel-polyfill";
+
+const urlsaqua = [
+  'https://s26.postimg.org/coddrzmk9/aqua_1_1024.jpg',
+  'https://s26.postimg.org/i12864agp/aqua_2_1024.jpg'
+];
 
 export default class GalleryImageAqua extends Component {
-  renderImage(imgUrl) {
-    return (
-      <div>
-        <img className="gallery-image-aqua" src={imgUrl} />
-      </div>
-    );
-  }
+    constructor(props) {
+      super(props);
+      this.state = {
+        images: urlsaqua,
+        selectedImage: urlsaqua[0]
+      }
+    }
+
+    handleClick(selectedImage) {
+      this.setState({selectedImage})
+    }
 
   render() {
+    const {images, selectedImage} = this.state;
+
     return (
       <div className="gallery-image-aqua container">
         <div className="gallery-intro-aqua">
@@ -27,14 +39,23 @@ export default class GalleryImageAqua extends Component {
           Get inspired by the many large fish tanks below here and discover how you can create an impressive underwater equipment.
           </p>
         </div>
-        <div className="images-aqua">
-          {this.props.imgUrls.map(imgUrl => this.renderImage(imgUrl))}
+
+        <div className="image-aqua-slide">
+          <div className="image-aqua-selected">
+            <img className="image-aqua-big" src={selectedImage} />
+            <div>
+              <img className="image-aqua-small img-responsive" src={selectedImage} />
+            </div>
+          </div>
+          <div className="image-aqua-scroller">
+            {images.map((image, index) => (
+              <div key={index} onClick={this.handleClick.bind(this,image)}>
+                <img src={image}/>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
   }
 }
-
-GalleryImageAqua.propTypes = {
-  imgUrls: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-};
