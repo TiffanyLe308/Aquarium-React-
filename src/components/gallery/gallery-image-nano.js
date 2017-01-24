@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import "babel-polyfill";
 
 const urlsnano = [
   'https://s26.postimg.org/i56lzz9ix/nano_1_640.jpg',
   'https://s26.postimg.org/76vchskxl/nano_2_640.jpg',
   'https://s26.postimg.org/uz4ntbmyh/nano_3_640.jpg',
-  'https://s26.postimg.org/4fc2r6mex/nano_4_640.jpg'
+  'https://s26.postimg.org/4fc2r6mex/nano_4_640.jpg',
+  'https://s26.postimg.org/pparmjpq1/nano_5_640.jpg'
 ];
 
 export default class GalleryImageNano extends Component {

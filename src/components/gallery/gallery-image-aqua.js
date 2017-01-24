@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
-import "babel-polyfill";
 
 const urlsaqua = [
   'https://s26.postimg.org/coddrzmk9/aqua_1_1024.jpg',
-  'https://s26.postimg.org/i12864agp/aqua_2_1024.jpg'
+  'https://s26.postimg.org/i12864agp/aqua_2_1024.jpg',
+  'https://s26.postimg.org/olqnal52x/aqua_4_1024.jpg'
 ];
 
 export default class GalleryImageAqua extends Component {
