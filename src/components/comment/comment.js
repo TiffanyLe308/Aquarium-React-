@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import $ from "jquery";
 
-const data = [
-    {id: 1, author: "Cory Brown", text: "My 2 scents"},
-    {id: 2, author: "Jared Anderson", text: "Let me put it this way. You've heard of Socrates? Aristotle? Plato? Morons!"},
-    {id: 3, author: "Matt Poulson", text: "It's just a function!"},
-    {id: 4, author: "Bruce Campbell", text: "Fish in a tree? How can that be?"}
-];
-
-class Comment extends React.Component {
+class Comment extends Component {
   render() {
     return <div className="comment">
     <h3 className="commentAuthor">{this.props.author}</h3>
@@ -17,16 +11,21 @@ class Comment extends React.Component {
   }
 }
 
-class CommentList extends React.Component {
+class CommentList extends Component {
   render() {
     let CommentNotes = this.props.data.map((comment) => {
-      return (<Comment author={comment.author} key={comment.id}>
-      {comment.text}
-      </Comment>)
+      return (
+        <Comment author={comment.author} key={comment.id}>
+          {comment.text}
+        </Comment>
+      )
     });
-    return (<div className="commentList">
-      {CommentNotes}
-    </div>)
+
+    return (
+      <div className="commentList">
+        {CommentNotes}
+      </div>
+  )
   }
 }
 
@@ -38,14 +37,14 @@ class CommentForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    var author = React.findDOMNode(this.refs.author).value.trim();
-    var text = React.findDOMNode(this.refs.text).value.trim();
+    var author = ReactDOM.findDOMNode(this.refs.author).value.trim();
+    var text = ReactDOM.findDOMNode(this.refs.text).value.trim();
     if (!text || !author) {
       return;
     }
     this.props.onCommentSubmit({author: author, text: text});
-    React.findDOMNode(this.refs.author).value = '';
-    React.findDOMNode(this.refs.text).value = '';
+    ReactDOM.findDOMNode(this.refs.author).value = '';
+    ReactDOM.findDOMNode(this.refs.text).value = '';
     return;
   }
 
@@ -98,6 +97,7 @@ export default class CommentBox extends Component {
 
   handleCommentSubmit(comment) {
       let comments = this.state.data;
+      comment.id = Date.now();
       let newComments = comments.concat([comment]);
       this.setState({data: newComments});
       $.ajax({

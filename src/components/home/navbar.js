@@ -12,7 +12,7 @@ export default class Menu extends Component {
       <Navbar collapseOnSelect className="navbar-custom">
         <Navbar.Header>
           <Navbar.Brand className="navbrand">
-            <a className="navbrand-logo" href="/"><img className="img-responsive" src="../../images/IMG_166598.jpg" /></a>
+            <a className="navbrand-logo" href="http://blog.aquariuminfo.org/" target="_blank"><img className="img-responsive" src="../../../images/IMG_166598.jpg" /></a>
             <a className="navbrand-name" href="/">Aquarium Nerd</a>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -21,7 +21,9 @@ export default class Menu extends Component {
           <Nav pullRight>
             <LinkContainer to="/"><NavItem eventKey={1}>Home</NavItem></LinkContainer>
 
-            <LinkContainer to="/news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer>
+            <li><Navbar.Link href="http://blog.aquariuminfo.org/" target="_blank">News</Navbar.Link></li>
+
+            {/* <LinkContainer to="/news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer> */}
             {/*<NavDropdown eventKey={3} title="News" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>
@@ -36,7 +38,7 @@ export default class Menu extends Component {
             </NavDropdown>
 
             <LinkContainer to="/about">
-              <NavItem eventKey={4}>About & Contact</NavItem>
+              <NavItem eventKey={4} target="_blank">About & Contact</NavItem>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
